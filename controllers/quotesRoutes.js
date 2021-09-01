@@ -2,7 +2,7 @@ const router = require('express').Router();
 // const db = require('../../models');
 
 router.get('/', (req, res) => {
-  db.Teacher.findAll()
+  db.Quote.findAll()
     .then(userData => {
       res.json(userData)
     }).catch(err => {
@@ -15,7 +15,7 @@ router.get('/', (req, res) => {
 })
 
 router.get('/:id', (req, res) => {
-  db.Teacher.findByPk(req.params.id)
+  db.Quote.findByPk(req.params.id)
     .then(userData => {
       res.json(userData)
     }).catch(err => {
@@ -28,16 +28,14 @@ router.get('/:id', (req, res) => {
 })
 
 router.post("/", (req, res) => {
-  db.Teacher.create({
+  db.Quote.create({
     name: req.body.name,
-    location: req.body.location,
-    bio_short: req.body.bio_short,
-    bio_full: req.body.bio_full,
+    tag_short: req.body.bio_short,
     image_name: "default.jpeg"
 
   })
-    .then(newTeacher => {
-      res.json(newTeacher);
+    .then(newQuote => {
+      res.json(newQuote);
     })
     .catch(err => {
       console.log(err)
