@@ -1,0 +1,22 @@
+[
+    {
+        "category": "happy",
+        "quote": "Happiness is free, but the world makes it expensive."
+    },
+    {
+        "category": "sad",
+        "quote": " Jeane de La Fontaine once said: Sadness flies away on the wings of time."
+    },
+    {
+        "category": "angry",
+        "quote": "Ambrose Bierce once said: Speak when you are angry and you will make the best speech you will ever regret."
+    },
+    {
+        "category": "humble_me",
+        "quote": "Lao Zhu stated: He who is contented is rich."
+    },
+    {
+        "category": "peaceful",
+        "quote": "Mahatma Gandhi once said: Peace is its own reward."
+    }
+]
