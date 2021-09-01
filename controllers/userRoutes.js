@@ -3,7 +3,7 @@ const router = require('express').Router();
 const passport = require('passport');
 
 router.get('/', (req, res) => {
-  db.User.findAll({include:[db.Teacher]})
+  db.User.findAll({include:[db.Quote]})
     .then(userData => {
       res.json(userData)
     }).catch(err => {
@@ -16,7 +16,7 @@ router.get('/', (req, res) => {
 })
 
 router.get('/:id', (req, res) => {
-  db.Teacher.findByPk(req.params.id)
+  db.Quote.findByPk(req.params.id)
     .then(userData => {
       res.json(userData)
     }).catch(err => {
@@ -39,10 +39,10 @@ router.post('/login', passport.authenticate('local-signin', {
 router.post("/request/:id", (req,res) =>{
   if(!req.user){
     res.status(401).json({
-      message:"Please login to get connected!"
+      message:"Please login to get your daily calm!"
     })
   } else {
-    db.Teacher.findByPk(req.params.id).then(userData=>{
+    db.Quote.findByPk(req.params.id).then(userData=>{
       userData.addUser(req.user.id).then(done=>{
         res.json({message:"request sent"})
       })

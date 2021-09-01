@@ -13,10 +13,10 @@ router.get("/", async (req, res) => {
 router.get('/directory', async (req, res) => {
     if (req.isAuthenticated()) {
         try {
-            const teacherData = await db.Teacher.findAll()
-            const teacherSend = teacherData.map((teacher) => teacher.get({ plain: true }));
-            console.log(teacherSend)
-            res.render('directory', { teacherSend });
+            const quoteData = await db.Quote.findAll()
+            const quoteSend = quoteData.map((quote) => quote.get({ plain: true }));
+            console.log(quoteSend)
+            res.render('directory', { quoteSend });
         } catch (err) {
             console.log(err);
             res.status(500).json(err);
@@ -26,11 +26,11 @@ router.get('/directory', async (req, res) => {
     }
 });
 
-router.get("/teacher-profile/:id", async (req, res) => {
+router.get("/quote-profile/:id", async (req, res) => {
     try {
-        const teacherData = await db.Teacher.findByPk(req.params.id)
-        const teacherSend = teacherData.dataValues
-        res.render('teacher-profile', teacherSend);
+        const quoteData = await db.Quote.findByPk(req.params.id)
+        const quoteSend = quoteData.dataValues
+        res.render('teacher-profile', quoteSend);
     } catch (err) {
         console.log(err);
         res.status(500).json(err);
@@ -40,10 +40,10 @@ router.get("/teacher-profile/:id", async (req, res) => {
 router.get("/account", async (req, res) => {
     if (req.isAuthenticated()) {
         let user = req.user
-        db.User.findByPk(req.user.id, { include: [db.Teacher] })
+        db.User.findByPk(req.user.id, { include: [db.Quote] })
             .then(userData => {
-                let teacherData = userData.Teachers
-                res.render('user-account', { user, teacherData })
+                let quoteData = userData.Quoutes
+                res.render('user-account', { user, quoteData })
             }).catch(err => {
                 console.log(err);
             })
@@ -61,8 +61,8 @@ router.get("/logout", (req, res) => {
     res.redirect("/")
 })
 
-router.get("/newteacher", (req, res) => {
-    res.render("new-teacher");
+router.get("/newquote", (req, res) => {
+    res.render("new-quote");
 })
 
 
