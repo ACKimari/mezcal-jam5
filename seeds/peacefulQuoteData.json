@@ -1,22 +1,27 @@
 [
     {
         "quote": "It isn’t enough to talk about peace. One must believe in it. And it isn’t enough to believe in it. One must work at it",
-        "author": "~ Eleanor Roosevelt ~"
+        "author": "~ Eleanor Roosevelt ~",
+        "category": "Peaceful"
     },
     {
         "quote": "Peace cannot be kept by force. It can only be achieved by understanding.",
-        "author": "~ Albert Einstein ~"
+        "author": "~ Albert Einstein ~",
+        "category": "Peaceful"
     },
     {
         "quote": "When the power of love overcomes the love of power the world will know peace.",
-        "author": "~ Jimi Hendrix ~"
+        "author": "~ Jimi Hendrix ~",
+        "category": "Peaceful"
     },
     {
         "quote": "When you make peace with yourself, you make peace with the world.",
-        "author": "~ Maha Ghosananda ~"
+        "author": "~ Maha Ghosananda ~",
+        "category": "Peaceful"
     },
     {
         "quote": "Love is the purest form of a soul at peace.",
-        "author": "~ Matthew Donnelly ~"
+        "author": "~ Matthew Donnelly ~",
+        "category": "Peaceful"
     }
 ]

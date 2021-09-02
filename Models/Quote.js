@@ -11,11 +11,12 @@ Quote.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    name: {
+    author: {
       type: DataTypes.STRING,
       allowNull: false,
+      defaultValue: DataTypes.NULL
     },
-    created_quote: {
+    quote: {
       type: DataTypes.STRING,
       allowNull:false,
     },
@@ -34,6 +35,7 @@ Quote.init(
         model: 'user',
         key: 'id',
       },
+      defaultValue: DataTypes.NULL
     },
   },
   {
@@ -41,7 +43,7 @@ Quote.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'hobnob',
+    modelName: 'quote',
   }
 );
 

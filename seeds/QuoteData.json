@@ -1,22 +1,32 @@
 [
     {
-        "category": "happy",
-        "created_quote": "Happiness is free, but the world makes it expensive."
+        "category": "Happy",
+        "quote": "Happiness is free, but the world makes it expensive.",
+        "user_id": 4,
+        "author": "AC Kimari"
     },
     {
-        "category": "sad",
-        "created_quote": " Jeane de La Fontaine once said: Sadness flies away on the wings of time."
+        "category": "Sad",
+        "quote": " Jeane de La Fontaine once said: Sadness flies away on the wings of time.",
+        "user_id": 2,
+        "author": "Jeane de La Fontaine"
     },
     {
-        "category": "angry",
-        "created_quote": "Ambrose Bierce once said: Speak when you are angry and you will make the best speech you will ever regret."
+        "category": "Angry",
+        "quote": "Ambrose Bierce once said: Speak when you are angry and you will make the best speech you will ever regret.",
+        "user_id": 3,
+        "author": "Ambrose Bierce"
     },
     {
-        "category": "humble_me",
-        "created_quote": "Lao Zhu stated: He who is contented is rich."
+        "category": "Humble Me",
+        "quote": "Lao Zhu stated: He who is contented is rich.",
+        "user_id": 1,
+        "author": "Lao Zhu"
     },
     {
-        "category": "peaceful",
-        "created_quote": "Mahatma Gandhi once said: Peace is its own reward."
+        "category": "Peaceful",
+        "quote": "Mahatma Gandhi once said: Peace is its own reward.",
+        "user_id": 5,
+        "author": "Mahatma Gandhi"
     }
 ]

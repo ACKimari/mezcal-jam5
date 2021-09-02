@@ -1,5 +1,5 @@
 const router = require('express').Router();
-// const db = require('../../models');
+const db = require('../Models');
 const passport = require('passport');
 
 router.get('/', (req, res) => {
