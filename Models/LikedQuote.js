@@ -25,14 +25,14 @@ LikedQuote.init(
       allowNull: false,
       defaultValue: DataTypes.NULL
     },
-    user_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'user',
-        key: 'id',
-      },
-      defaultValue: DataTypes.NULL
-    },
+    // user_id: {
+    //   type: DataTypes.INTEGER,
+    //   references: {
+    //     model: 'user',
+    //     key: 'id',
+    //   },
+    //   defaultValue: DataTypes.NULL
+    // },
   },
   {
     sequelize,

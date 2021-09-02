@@ -18,7 +18,8 @@ User.hasMany(LikedQuote, {
 });
 
 LikedQuote.belongsToMany(User, {
-    through: "userLikedQuote"
+    as: "favorites",
+    through: "LikedQuote"
 });
 
 // User.belongsToMany(User, {
