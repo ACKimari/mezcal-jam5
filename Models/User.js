@@ -49,10 +49,6 @@ User.init(
                     msg: 'Please enter a valid password'
                 }
             },
-        },
-        location: {
-            type: DataTypes.STRING,
-            allowNull: false
         }
     },
     {

@@ -14,7 +14,7 @@ Quote.init(
     author: {
       type: DataTypes.STRING,
       allowNull: false,
-      defaultValue: null
+      defaultValue: DataTypes.NULL
     },
     quote: {
       type: DataTypes.STRING,
@@ -35,7 +35,7 @@ Quote.init(
         model: 'user',
         key: 'id',
       },
-      defaultValue: null
+      defaultValue: DataTypes.NULL
     },
   },
   {

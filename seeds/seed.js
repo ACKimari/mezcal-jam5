@@ -1,9 +1,10 @@
 const sequelize = require('../config/connection');
-const { User, Quote, Category } = require('../Models');
+const { User, Quote, UserFollower } = require('../Models');
 
 const userData = require('./userData.json');
 const QuoteData = require('./QuoteData.json');
-const Category = require('../categoryQuoteData.json');
+const Followers = require('./userFollowersQuoteData.json');
+// const AppQuotes = require('./applicationQuotesData.json');
 
 
 const seedDatabase = async () => {
@@ -14,17 +15,23 @@ const seedDatabase = async () => {
     returning: true,
   });
 
-  await Category.bulkCreate(categoryQuoteData, {
+  for (const quote of QuoteData) {
+    await Quote.create({
+      ...quote,
+      // user_id: users[Math.floor(Math.random() * users.length)].id,
+    });
+  };
+
+  await UserFollower.bulkCreate(Followers, {
     individualHooks: true,
     returning: true,
   });
 
-  for (const quote of QuoteData) {
-    await Quote.create({
-      ...quote,
-      user_id: users[Math.floor(Math.random() * users.length)].id,
-    });
-  }
+  // await AppQuotes.bulkCreate(Quote, {
+  //   individualHooks: true,
+  //   returning: true,
+  // });
+
   console.log('seeded')
   process.exit(0);
 };
