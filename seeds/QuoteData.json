@@ -6,6 +6,18 @@
         "author": "AC Kimari"
     },
     {
+        "category": "Angry",
+        "quote": "Release your anger and take note of how awake your mind becomes to reality. Anger robs you of special time and moments, while peace allows you to be present. So choose peace over anger.",
+        "user_id": 4,
+        "author": "AC Kimari"
+    },
+    {
+        "category": "Happy",
+        "quote": "Happiness exists within you. You have the power to choose it at any moment in your life.",
+        "user_id": 4,
+        "author": "AC Kimari"
+    },
+    {
         "category": "Sad",
         "quote": " Jeane de La Fontaine once said: Sadness flies away on the wings of time.",
         "user_id": 2,
@@ -28,5 +40,47 @@
         "quote": "Mahatma Gandhi once said: Peace is its own reward.",
         "user_id": 5,
         "author": "Mahatma Gandhi"
+    },
+    {
+        "category": "Humble Me",
+        "quote": "A calm and humble life will bring more happiness than the pursuit of success and the constant restlessness that commes with it.",
+        "user_id": 2,
+        "author": "Albert Einstein"
+    },
+    {
+        "category": "Humble Me",
+        "quote": "Mastery begins with Humility.",
+        "user_id": 3,
+        "author": "The Random Vibez"
+    },
+    {
+        "category": "Humble Me",
+        "quote": "True Humility is not thinking less of yourself; It is thinking of yourself less.",
+        "user_id": 5,
+        "author": "C. S. Lewis"
+    },
+    {
+        "category": "Humble Me",
+        "quote": "The indispensible judicial requisite is intellectual humility.",
+        "user_id": 1,
+        "author": "Felix Frankfurter"
+    },
+    {
+        "category": "Peaceful",
+        "quote": "It isn’t enough to talk about peace. One must believe in it. And it isn’t enough to believe in it. One must work at it",
+        "user_id": 2,
+        "author": "Eleanor Roosevelt"
+    },
+    {
+        "category": "Peaceful",
+        "quote": "Peace cannot be kept by force. It can only be achieved by understanding.",
+        "user_id": 3,
+        "author": "Albert Einstein"
+    },
+    {
+        "category": "Peaceful",
+        "quote": "When the power of love overcomes the love of power the world will know peace.",
+        "user_id": 4,
+        "author": "Jimi Hendrix"
     }
 ]
