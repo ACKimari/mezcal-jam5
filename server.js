@@ -15,7 +15,7 @@ const PORT = process.env.PORT || 3001;
 
 
 const sess = {
-  secret: 'Smart Link',
+  secret: 'Soap Box',
   cookie: {},
   resave: false,
   saveUninitialized: true,

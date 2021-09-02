@@ -1,10 +1,12 @@
 const router = require('express').Router();
-// const db = require('../../models');
+const db = require('../../Models');
 const passport = require('passport');
 
 router.get('/', (req, res) => {
+  console.log("getting following data");
   db.Follower.findAll({include:[db.User]})
     .then(followerData => {
+      console.log(followerData);
       res.json(followerData)
     }).catch(err => {
       console.log(err);
