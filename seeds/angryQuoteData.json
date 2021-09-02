@@ -1,22 +1,27 @@
 [
     {
         "quote": "You will not be punished for your anger, you will be punished by your anger.",
-        "author": "~ Buddha ~"
+        "author": "~ Buddha ~",
+        "category": "Angry"
     },
     {
         "quote": "Anger is one letter short of Danger.",
-        "author": "~ Quotling.com ~"
+        "author": "~ Quotling.com ~",
+        "category": "Angry"
     },
     {
         "quote": "Holding onto anger is like drinking poison and expecting the other person to die.",
-        "author": "~ Uknown ~"
+        "author": "~ Uknown ~",
+        "category": "Angry"
     },
     {
         "quote": "Anger is an acid that can do more harm to the vessel in which it is stored than to anything on which it is poured.",
-        "author": "~ Twain Quotes ~"
+        "author": "~ Twain Quotes ~",
+        "category": "Angry"
     },
     {
         "quote": "Release your anger and take note of how awake your mind becomes to reality. Anger robs you of special time and moments, while peace allows you to be present. So choose peace over anger.",
-        "author": "~ Wambui Kimari ~"
+        "author": "~ Wambui Kimari ~",
+        "category": "Angry"
     }
 ]
