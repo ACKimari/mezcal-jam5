@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-session": "^1.17.2",
+    "passport": "^0.4.1",
+    "sequelize": "^6.6.5",
+    "mysql2": "^2.3.0",
+    "path": "^0.12.7",
+    "bcrypt": "^5.0.1",
+    "connect-session-sequelize": "^7.0.4",
+    "dotenv": "^8.2.0"
+  },
+  "scripts": {
+    "seed": "node seeds/seed.js"
+  }
+}
