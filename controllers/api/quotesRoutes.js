@@ -49,4 +49,23 @@ router.post("/", (req, res) => {
     })
 })
 
+router.delete('/:id', async (req, res) => {
+  try {
+    const quoteData = await Quote.destroy({
+      where: {
+        id: req.params.id,
+      },
+    });
+
+    if (!quoteData) {
+      res.status(404).json({ message: 'No quote here, brotha' });
+      return;
+    }
+
+    res.status(200).json(quoteData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 module.exports = router;
