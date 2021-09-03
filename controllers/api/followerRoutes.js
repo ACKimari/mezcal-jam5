@@ -1,10 +1,11 @@
 const router = require('express').Router();
-const db = require('../../Models');
-const passport = require('passport');
+const { UserFollower, User } = require('../../Models');
+
+
 
 router.get('/', (req, res) => {
   console.log("getting following data");
-  db.Follower.findAll({include:[db.User]})
+  UserFollower.findAll({include:[User]})
     .then(followerData => {
       console.log(followerData);
       res.json(followerData)
@@ -18,7 +19,7 @@ router.get('/', (req, res) => {
 })
 
 router.get('/:id', (req, res) => {
-  db.User.findByPk(req.params.id)
+  User.findByPk(req.params.id)
     .then(followerData => {
       res.json(followerData)
     }).catch(err => {
@@ -31,20 +32,13 @@ router.get('/:id', (req, res) => {
 })
 
 
-router.post('/login', passport.authenticate('local-signin', {
-  successRedirect: '/directory',
-
-  failureRedirect: '/login'
-}
-));
-
 router.post("/request/:id", (req,res) =>{
   if(!req.follower){
     res.status(401).json({
       message:"Please login to get your daily calm!"
     })
   } else {
-    db.User.findByPk(req.params.id).then(followerData=>{
+    User.findByPk(req.params.id).then(followerData=>{
       followerData.addFollower(req.follower.id).then(done=>{
         res.json({message:"request sent"})
       })
@@ -53,7 +47,7 @@ router.post("/request/:id", (req,res) =>{
 })
 
 router.post("/", (req, res) => {
-  db.Follower.create({
+  UserFollower.create({
     first_name: req.body.first_name,
     last_name: req.body.last_name,
     email: req.body.email,

@@ -1,8 +1,10 @@
 const router = require('express').Router();
-const db = require('../Models');
+const { Quote } = require('../../Models');
+
 
 router.get('/', (req, res) => {
-  db.Quote.findAll()
+  console.log(Quote)
+  Quote.findAll()
     .then(userData => {
       res.json(userData)
     }).catch(err => {
@@ -15,7 +17,7 @@ router.get('/', (req, res) => {
 })
 
 router.get('/:id', (req, res) => {
-  db.Quote.findByPk(req.params.id)
+  Quote.findByPk(req.params.id)
     .then(userData => {
       res.json(userData)
     }).catch(err => {
@@ -28,10 +30,11 @@ router.get('/:id', (req, res) => {
 })
 
 router.post("/", (req, res) => {
-  db.Quote.create({
-    name: req.body.name,
-    tag_short: req.body.bio_short,
-    image_name: "default.jpeg"
+  Quote.create({
+    author: req.body.author,
+    category: req.body.category,
+    quote: req.body.quote,
+    user_id: req.body.user_id
 
   })
     .then(newQuote => {

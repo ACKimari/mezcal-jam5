@@ -1,9 +1,10 @@
 const router = require('express').Router();
-const db = require('../Models');
-const passport = require('passport');
+const { User, Quote, LikedQuote } = require('../../Models');
+
+
 
 router.get('/', (req, res) => {
-  db.User.findAll({include:[db.Quote]})
+  User.findAll({include:[Quote]})
     .then(userData => {
       res.json(userData)
     }).catch(err => {
@@ -16,7 +17,7 @@ router.get('/', (req, res) => {
 })
 
 router.get('/:id', (req, res) => {
-  db.Quote.findByPk(req.params.id)
+  Quote.findByPk(req.params.id)
     .then(userData => {
       res.json(userData)
     }).catch(err => {
@@ -29,20 +30,13 @@ router.get('/:id', (req, res) => {
 })
 
 
-router.post('/login', passport.authenticate('local-signin', {
-  successRedirect: '/directory',
-
-  failureRedirect: '/login'
-}
-));
-
 router.post("/request/:id", (req,res) =>{
   if(!req.user){
     res.status(401).json({
       message:"Please login to get your daily calm!"
     })
   } else {
-    db.Quote.findByPk(req.params.id).then(userData=>{
+    Quote.findByPk(req.params.id).then(userData=>{
       userData.addUser(req.user.id).then(done=>{
         res.json({message:"request sent"})
       })
@@ -51,7 +45,7 @@ router.post("/request/:id", (req,res) =>{
 })
 
 router.post("/", (req, res) => {
-  db.User.create({
+  User.create({
     first_name: req.body.first_name,
     last_name: req.body.last_name,
     email: req.body.email,
