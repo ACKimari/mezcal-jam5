@@ -3,6 +3,7 @@ const Quote = require('./Quote');
 const UserFollower = require('./UserFollower');
 const LikedQuote = require('./LikedQuote');
 
+
 User.hasMany(Quote, {
     foreignKey: 'user_id',
     onDelete: 'CASCADE'
@@ -22,7 +23,11 @@ LikedQuote.belongsToMany(User, {
     through: "LikedQuote"
 });
 
-// User.belongsToMany(User, {
+User.hasMany(UserFollower, {
+    foreignKey: 'Followers'
+})
+
+// User.belongsToMany(UserFollower, {
 //     as: "Followers",
 //     through: "Followers"
 // });
